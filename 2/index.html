@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>강원테크노파크 — 차가움을 자원으로</title>
+<link rel="icon" href="../shared/img/favicon.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="gnb">
+  <a class="logo" href="./"><img src="../shared/img/logo-navy.png" alt="재단법인 강원테크노파크"></a>
+  <nav class="menu" aria-label="주 메뉴">
+    <a href="#">공고안내</a><a href="#">사업안내</a><a href="#">입주안내</a><a href="#">경영공시</a><a href="#">TP NOW</a><a href="#">TP소개</a>
+  </nav>
+  <div class="tools">
+    <button class="icon-btn" type="button" aria-label="검색"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.4 15.4 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></button>
+    <button class="icon-btn" type="button" aria-label="전체 메뉴"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2.2"/></svg></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="shot">
+      <picture>
+        <source media="(max-width: 1099px) and (max-aspect-ratio: 1/1)" srcset="board/hero-m-800.jpg 800w, board/hero-m.jpg 1195w" sizes="100vw">
+        <img src="board/hero.jpg" srcset="board/hero-1440.jpg 1440w, board/hero.jpg 2400w" sizes="100vw" alt="액화수소 배관 플랜지의 볼트와 철판 위에 하얗게 자란 서리 결정을 가까이 찍은 사진">
+      </picture>
+    </div>
+    <span class="cue" aria-hidden="true"></span>
+    <h1 class="line"><span>차가움을</span><span>자원으로</span></h1>
+    <div class="side">
+    <p class="lead">소양강댐 찬물로 데이터센터를 식히는 <span class="nw">K-클라우드파크</span>, <span class="nw">영하 253도</span> 액화수소, <span class="nw">LNG 냉열</span> — 강원의 차가움이 새 산업이 됩니다.</p>
+    <aside class="now" aria-labelledby="now-h">
+      <div class="now-head">
+        <h2 id="now-h">지금 접수 중인 공고</h2>
+        <p class="count"><b id="liveCount">0</b>건</p>
+      </div>
+      <ol class="now-list" id="nowList"></ol>
+      <a class="all" href="https://www.gwtp.or.kr/gwtp/bbsNew_list.php?code=sub01b&amp;keyvalue=sub01" target="_blank" rel="noopener">공고 전체 보기</a>
+    </aside>
+    </div>
+  </section>
+</main>
+
+<script src="../shared/base.js"></script>
+<script src="../shared/gw-map.js"></script>
+<script src="../shared/notices.js"></script>
+<script src="../shared/gw-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

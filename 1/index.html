@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강원테크노파크</title>
+<link rel="icon" href="../shared/img/favicon.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="gnb">
+  <a class="logo" href="#"><img src="../shared/img/logo-navy.png" alt="강원테크노파크"></a>
+  <nav class="menu" aria-label="주 메뉴">
+    <a href="#">공고안내</a><a href="#">사업안내</a><a href="#">입주안내</a><a href="#">경영공시</a><a href="#">TP NOW</a><a href="#">TP소개</a>
+  </nav>
+  <div class="util">
+    <button class="ico" type="button" aria-label="검색"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
+    <button class="ico" type="button" aria-label="전체 메뉴"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-label="첫 화면">
+    <div class="stage" id="stage">
+      <figure class="slide is-on" data-i="0"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-ai.jpg"><img src="board/s-ai.jpg" alt="냉수 냉각판을 얹은 AI 연산 모듈"></picture></figure>
+      <figure class="slide" data-i="1"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-bio.jpg"><img src="board/s-bio.jpg" alt="천연물 추출액이 담긴 유리 바이알 세 개" loading="lazy"></picture></figure>
+      <figure class="slide" data-i="2"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-health.jpg"><img src="board/s-health.jpg" alt="몸에 붙이는 심전도 패치" loading="lazy"></picture></figure>
+      <figure class="slide" data-i="3"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-semi.jpg"><img src="board/s-semi.jpg" alt="반도체 장비에 들어가는 흰 세라믹 링" loading="lazy"></picture></figure>
+      <figure class="slide" data-i="4"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-h2.jpg"><img src="board/s-h2.jpg" alt="탄소섬유로 감은 수소 저장 용기" loading="lazy"></picture></figure>
+      <figure class="slide" data-i="5"><picture><source media="(max-width: 600px), (max-aspect-ratio: 4/5)" srcset="board/m-mob.jpg"><img src="board/s-mob.jpg" alt="전기차 구동모터 고정자" loading="lazy"></picture></figure>
+    </div>
+    <div class="copy">
+      <h1 class="line"><span class="ln">혁신으로 여는 미래,</span><span class="ln">함께 성장하는 강원</span></h1>
+      <p class="sub">강원테크노파크는 춘천, 홍천, 원주, 강릉, 삼척, 태백의 15개 시설에서 반도체, 바이오, 디지털헬스, 수소, 모빌리티, AI 기업을 키웁니다.</p>
+      <div class="pager">
+        <ol class="steps" id="steps">
+        <li><button type="button" class="is-on" data-i="0">AI<i></i></button></li>
+        <li><button type="button" data-i="1">바이오<i></i></button></li>
+        <li><button type="button" data-i="2">디지털헬스<i></i></button></li>
+        <li><button type="button" data-i="3">반도체<i></i></button></li>
+        <li><button type="button" data-i="4">수소<i></i></button></li>
+        <li><button type="button" data-i="5">모빌리티<i></i></button></li>
+        </ol>
+        <p class="cap" id="cap"><b>AI</b>소양강댐 냉수로 식히는 K-클라우드파크</p>
+      </div>
+    </div>
+    <div class="band">
+      <div class="band-head">
+        <p>지금 접수 중인 공고</p>
+        <strong><span id="liveCount">0</span>건</strong>
+        <a href="https://www.gwtp.or.kr/gwtp/bbsNew_list.php?code=sub01b&amp;keyvalue=sub01" target="_blank" rel="noopener">전체 공고 보기</a>
+      </div>
+      <ul class="band-list" id="nowList"></ul>
+    </div>
+  </section>
+</main>
+<script src="../shared/base.js"></script>
+<script src="../shared/notices.js"></script>
+<script src="../shared/gw-core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

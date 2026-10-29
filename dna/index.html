@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>강원TP 시안 테스트 4 — 에이전시 DNA 문서</title>
+<link rel="icon" href="../shared/img/favicon.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../board.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <p class="crumb"><a href="../index.html">콘셉트 보드 3장으로 돌아가기</a></p>
+    <h1>에이전시 DNA 문서 한 장</h1>
+    <p class="lead">한국 상위 에이전시 세 곳이 만든 살아 있는 사이트를 PC 1440과 폰 412 두 폭에서 숫자로 쟀습니다. 세 곳 이상 또는 두 회사 이상에서 반복되는 것만 규칙으로 남기고, 한 사이트의 버릇은 뺐습니다.</p>
+    <ul class="legend"><li><i style="background:#1d4ed8"></i>더즈인터랙티브</li><li><i style="background:#c2410c"></i>페이브</li><li><i style="background:#111827"></i>플러스엑스</li></ul>
+    <ul class="roles">
+  <li><b>페이브</b>비주얼과 움직임 — 한 장이 화면을 덮는 방식, 한 줄이 나타나는 시간과 곡선</li>
+  <li><b>더즈인터랙티브</b>기관 사이트 구조 — 섹션 순서, 밀도, 메가 메뉴, 실용 기능을 떼어 붙이는 자리</li>
+  <li><b>플러스엑스</b>글자 위계 — 가장 큰 글자와 본문의 크기 차이, 중간 크기를 두지 않는 법</li>
+</ul>
+    <p class="meta">2026-10-29 21:00~21:20, 헤드리스 크롬(실제 크롬 엔진)으로 PC 1440×900·폰 412×915 두 폭에서 첫 화면·머리글·메뉴·섹션·글자·카드·움직임을 숫자로 잼. 키트 measure.py의 첫 화면 측정에 섹션 구조·글자 전체 분포·메가 메뉴·스크롤 시간축 샘플(80~2300ms)·라이브러리 감지를 더한 확장판.</p>
+    <p class="meta">18곳 중 16곳 측정. 한국전력(home.kepco.co.kr)은 이 PC에서 접속이 계속 끊겨(ERR_CONNECTION_CLOSED, curl도 SSL 끊김) 못 잼. 춘식이 관찰일기 영문(lr.doesbook.kr)은 첫 화면이 캔버스 게임 로딩이라 구조 수치가 없음 — 움직임 참고만. 디알이미지·이스트폴·아키텍트는 &#x27;입장&#x27; 화면형이라 구조 규칙의 근거에서 뺌.</p>
+    <p class="meta strong">레이아웃·이미지·3D·문구·코드는 가져오지 않았다. 숫자로 잰 원리(폭·크기 비·위치·시간·곡선·순서)만 규칙으로 남겼고, 이 문서에는 남의 화면 캡처를 싣지 않았다(첫 화면 배치는 잰 숫자로 다시 그린 상자 그림).</p>
+  </div>
+</header>
+<section class="sec" id="frames">
+  <div class="wrap">
+    <h2>잰 숫자로 다시 그린 첫 화면 세 가지</h2>
+    <div class="frames">
+      <figure><svg viewBox="0 0 320 200" role="img" aria-label="기업형 첫 화면 배치">
+<rect x="0" y="0" width="320" height="200" fill="#9aa7b1"/>
+<rect x="0" y="0" width="320" height="22" fill="none"/>
+<rect x="14" y="9" width="34" height="5" fill="#fff"/><rect x="190" y="10" width="96" height="3" fill="#fff"/><rect x="296" y="9" width="10" height="5" fill="#fff"/>
+<rect x="14" y="112" width="132" height="13" fill="#fff"/><rect x="14" y="130" width="104" height="13" fill="#fff"/>
+<rect x="14" y="150" width="90" height="4" fill="#e7ecef"/>
+<rect x="0" y="170" width="320" height="30" fill="#fff"/>
+<rect x="14" y="181" width="40" height="8" fill="#9aa7b1"/><rect x="90" y="181" width="60" height="8" fill="#cfd6db"/><rect x="164" y="181" width="60" height="8" fill="#cfd6db"/><rect x="238" y="181" width="60" height="8" fill="#cfd6db"/>
+</svg><figcaption><b>기업형</b>한 장이 화면 전체(C1), 한 줄은 왼쪽 아래 두 줄(C2), 투명 머리글(C3), 실용 기능은 아래 흰 띠(C4) — 한화에어로스페이스, 한화그룹, KT&amp;G, 이지스, 한화오션</figcaption></figure>
+      <figure><svg viewBox="0 0 320 200" role="img" aria-label="글자가 곧 그림인 첫 화면 배치">
+<rect x="0" y="0" width="320" height="200" fill="#f4f5f6"/>
+<rect x="0" y="0" width="320" height="116" fill="#9aa7b1"/>
+<rect x="14" y="9" width="34" height="5" fill="#111"/><rect x="200" y="10" width="106" height="3" fill="#111"/>
+<rect x="14" y="104" width="200" height="38" fill="#111"/><rect x="14" y="148" width="200" height="38" fill="#111"/>
+<rect x="232" y="150" width="74" height="4" fill="#59656d"/><rect x="232" y="158" width="62" height="4" fill="#59656d"/>
+</svg><figcaption><b>글자가 곧 그림</b>사물 하나가 위를 덮고 화면 폭 큰 글자가 그 아래 가장자리에 걸침, 가장 큰 글자 = 본문의 10배 이상(B5) — LX 트렌드십, 플러스엑스 15주년·버추얼</figcaption></figure>
+      <figure><svg viewBox="0 0 320 200" role="img" aria-label="기관 실용형 첫 화면 배치">
+<rect x="0" y="0" width="320" height="200" fill="#9aa7b1"/>
+<rect x="14" y="9" width="34" height="5" fill="#fff"/><rect x="190" y="10" width="116" height="3" fill="#fff"/>
+<rect x="14" y="58" width="120" height="12" fill="#fff"/><rect x="14" y="74" width="96" height="12" fill="#fff"/>
+<rect x="214" y="40" width="92" height="40" fill="#fff"/><rect x="214" y="86" width="92" height="40" fill="#fff"/><rect x="214" y="132" width="92" height="22" fill="#fff"/>
+<rect x="14" y="160" width="186" height="24" fill="#fff"/><rect x="20" y="168" width="110" height="8" fill="#cfd6db"/>
+</svg><figcaption><b>기관 실용형</b>한 장 위에 한 줄과 함께 오른쪽 정보판·아래 검색판(C4), 메가 메뉴(D5) — 삼성서울병원, JB금융그룹, 인터컨티넨탈</figcaption></figure>
+    </div>
+  </div>
+</section>
+<div class="wrap"><section class="grp" id="gA"><h2>A. 격자와 여백</h2><p class="owner">주로 배운 곳: 더즈·페이브</p><ol class="rules"><li class="rule" id="A1">
+  <p class="r-id">A1</p>
+  <div class="r-body">
+    <p class="r-rule">PC 1440에서 본문 폭은 1,320px 안팎, 양옆 여백 60px(화면 폭의 4%)로 넓게 쓴다.</p>
+    <p class="r-num">본문 폭 1,240~1,360, 왼쪽 여백 40~100, 가운데값 1,320/60</p>
+    <p class="r-count">근거 10곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 1,315 / 63</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 1,320 / 60</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 1,317 / 61</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 1,326 / 57</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 1,360 / 40</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 1,356 / 42</li><li><i style="background:#1d4ed8"></i><b>상쾌환 EASY TOMORROW</b> 1,320 / 60</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 1,260 / 90</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 1,240 / 100</li><li><i style="background:#111827"></i><b>플러스엑스 버추얼 쇼룸</b> 1,300 / 70</li></ul>
+  </div>
+</li><li class="rule" id="A2">
+  <p class="r-id">A2</p>
+  <div class="r-body">
+    <p class="r-rule">폰(412)에서는 양옆 20px만 남기고 본문을 372px 폭으로 꽉 채운다.</p>
+    <p class="r-num">본문 367~372, 여백 20~23</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 371 / 21</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 370 / 21</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 367 / 23</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 370 / 21</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 372 / 20</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 372 / 20</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 372 / 20</li></ul>
+  </div>
+</li><li class="rule" id="A3">
+  <p class="r-id">A3</p>
+  <div class="r-body">
+    <p class="r-rule">섹션은 위쪽에 90~160px(가운데값 약 124px)을 비우고 시작한다. 폰은 80px.</p>
+    <p class="r-num">섹션 시작~첫 글자: PC 90~160, 폰 80~101</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 123 / 80</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 90 / 101</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 142</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 160 / 80</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 100~140</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 98 / 80</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 124</li></ul>
+  </div>
+</li><li class="rule" id="A4">
+  <p class="r-id">A4</p>
+  <div class="r-body">
+    <p class="r-rule">반복 카드는 간격 18~40px, 소식은 한 줄 3칸, 계열사·상품처럼 많은 것은 5칸 이상.</p>
+    <p class="r-num">소식 3칸, 간격 18~40</p>
+    <p class="r-count">근거 5곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 뉴스 3칸·간격 18</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 3칸·간격 40</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 계열사 5칸</li><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 미디어 9칸·간격 19</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 5칸·간격 40</li></ul>
+  </div>
+</li><li class="rule" id="A5">
+  <p class="r-id">A5</p>
+  <div class="r-body">
+    <p class="r-rule">머리글 높이는 PC 약 90px(80~108), 폰 약 64px(60~84).</p>
+    <p class="r-num">PC 80~108, 폰 60~84</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 108 / 74</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 92 / 63</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 91 / 84</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 80 / 72</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 98 / 62</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 68 / 60</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 90 / 63</li></ul>
+  </div>
+</li></ol></section><section class="grp" id="gB"><h2>B. 글자 단계</h2><p class="owner">주로 배운 곳: 플러스엑스(위계)·더즈(기관형 크기)</p><ol class="rules"><li class="rule" id="B1">
+  <p class="r-id">B1</p>
+  <div class="r-body">
+    <p class="r-rule">본문은 PC 16~19px, 폰 15~17px. 작게 쓰지 않는다.</p>
+    <p class="r-num">PC 가운데값 18, 폰 16</p>
+    <p class="r-count">근거 8곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스), 이 규칙을 쓴 보드 ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 19.2 / 17.4</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 18 / 16</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 16 / 15</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 15 / 16</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 15 / 14</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 21 / 20</li><li><i style="background:#111827"></i><b>플러스엑스 15주년</b> 20</li><li><i style="background:#111827"></i><b>플러스엑스 버추얼 쇼룸</b> 20</li></ul>
+  </div>
+</li><li class="rule" id="B2">
+  <p class="r-id">B2</p>
+  <div class="r-body">
+    <p class="r-rule">섹션 제목은 PC 약 56px(본문의 3~3.5배), 폰 32~36px. 여러 회사에서 거의 같은 값이 나온다.</p>
+    <p class="r-num">PC 54~59, 폰 28~43</p>
+    <p class="r-count">근거 6곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 59</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 57 / 36</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 57</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 55.5 / 32</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 55 / 36</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 54 / 28</li></ul>
+  </div>
+</li><li class="rule" id="B3">
+  <p class="r-id">B3</p>
+  <div class="r-body">
+    <p class="r-rule">기업형 첫 화면 한 줄은 PC 75~115px(화면 폭의 5~8%), 폰은 화면 폭의 12~15%.</p>
+    <p class="r-num">PC 5.2~8.0vw, 폰 9.7~15.5vw</p>
+    <p class="r-count">근거 5곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 115px(8.0vw) / 53.6px(13vw)</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 103.5px(7.2vw) / 59px(14.4vw)</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 89px(6.2vw) / 48px(11.7vw)</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 85px(5.9vw) / 64px(15.5vw)</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 75px(5.2vw) / 40px(9.7vw)</li></ul>
+  </div>
+</li><li class="rule" id="B4">
+  <p class="r-id">B4</p>
+  <div class="r-body">
+    <p class="r-rule">큰 제목일수록 굵기를 낮춘다(400~500). 행간 1.0~1.14, 자간 -0.02~-0.03em(그보다 좁히지 않음).</p>
+    <p class="r-num">굵기 200~500, 행간 1.0~1.14, 자간 0~-0.03em</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 200, 1.1, -0.03</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 400, 1.14, -0.02</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 500, 1.0</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 400, -0.03</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 500, -0.01</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 400</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 400, -0.01</li></ul>
+  </div>
+</li><li class="rule" id="B5">
+  <p class="r-id">B5</p>
+  <div class="r-body">
+    <p class="r-rule">글자가 곧 그림일 때는 가장 큰 글자를 본문의 10배 이상(화면 폭 15~17%)으로, 둘째 단계는 5배, 그 사이 크기는 두지 않는다. 행간 0.7~0.9.</p>
+    <p class="r-num">가장 큰 글자 ÷ 본문 = 10.5~14배</p>
+    <p class="r-count">근거 4곳, 2개 회사(페이브, 플러스엑스), 이 규칙을 쓴 보드 ②</p>
+    <ul class="chips"><li><i style="background:#111827"></i><b>플러스엑스 15주년</b> 230 / 105 / 20 (11.5배, 행간 0.8)</li><li><i style="background:#111827"></i><b>플러스엑스 버추얼 쇼룸</b> 210 / 115 / 20 (10.5배, 행간 0.7)</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 240 / 40.5 / 21 (11.4배, 행간 1.0)</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 172.5 / 75 / 12</li></ul>
+  </div>
+</li><li class="rule" id="B6">
+  <p class="r-id">B6</p>
+  <div class="r-body">
+    <p class="r-rule">한글은 고딕 한 벌(Pretendard·SUIT·자사 고딕)로 제목과 본문을 같이 쓰고, 장식은 영문 글꼴 한 벌만 더한다. 한글 세리프 제목은 한 곳도 없다.</p>
+    <p class="r-num">한글 고딕 7/7, 한글 세리프 제목 0</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> Pretendard + Figtree</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> Pretendard</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> SUIT + roc-grotesk</li><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 한화고딕 + gibson</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> Pretendard + Optima</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> Pretendard + Nenu Haas</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 한화고딕</li></ul>
+  </div>
+</li></ol></section><section class="grp" id="gC"><h2>C. 첫 화면 구성 — 한 줄과 한 장을 어디에</h2><p class="owner">주로 배운 곳: 페이브(비주얼)·더즈(기관형)</p><ol class="rules"><li class="rule" id="C1">
+  <p class="r-id">C1</p>
+  <div class="r-body">
+    <p class="r-rule">한 장(사진·영상·3D)이 첫 화면 전체를 덮는다. 그림을 상자에 넣어 작게 두지 않는다.</p>
+    <p class="r-num">첫 화면 중 그림이 덮는 비율 80~100%</p>
+    <p class="r-count">근거 9곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 100%</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 100%(영상)</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 100%(영상)</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 100%(영상)</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 100%(영상)</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 80%(영상)</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 96%(영상)</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 100%</li><li><i style="background:#c2410c"></i><b>롯데캐슬 이스트폴</b> 100%(3D)</li></ul>
+  </div>
+</li><li class="rule" id="C2">
+  <p class="r-id">C2</p>
+  <div class="r-body">
+    <p class="r-rule">한 줄은 왼쪽 아래 — 본문 왼쪽 선(화면 폭 3~8%)에 맞추고 세로 60~90% 높이에, 두 줄 이내.</p>
+    <p class="r-num">x 3~8%, y 59~100%, 1~2줄</p>
+    <p class="r-count">근거 6곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> x5%, y84~89%</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> x8%, y59~68%</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> x3%, y70~83%</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> x5%, y59~85%</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> x6%, y60~82%</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> x3%, y73~100%</li></ul>
+  </div>
+</li><li class="rule" id="C3">
+  <p class="r-id">C3</p>
+  <div class="r-body">
+    <p class="r-rule">머리글은 투명하게 그림 위에 얹고, 대메뉴 6~8개(16px·굵기 500) + 오른쪽 검색·전체메뉴.</p>
+    <p class="r-num">투명 7/7, 메뉴 14~17.5px, 굵기 500</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 투명·16px</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 투명·16px·7개</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 투명·17.5px·500</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 투명·16px·7개</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 투명·16px</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 투명·14.3px·7개</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 투명·13.5px</li></ul>
+  </div>
+</li><li class="rule" id="C4">
+  <p class="r-id">C4</p>
+  <div class="r-body">
+    <p class="r-rule">실용 기능(검색·예약·공지)은 첫 화면 아래쪽에 흰 띠나 흰 판으로 떼어 붙인다. 그림 위에 버튼을 흩뿌리지 않는다.</p>
+    <p class="r-num">4곳, 2개 회사</p>
+    <p class="r-count">근거 4곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 검색판(질환 A~Z)</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 아래 흰 띠(장면 설명·넘김)</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 오른쪽 정보판(신용등급·IR·주가)</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 아래 예약 띠</li></ul>
+  </div>
+</li><li class="rule" id="C5">
+  <p class="r-id">C5</p>
+  <div class="r-body">
+    <p class="r-rule">첫 화면이 여러 장이면 아래에 차오르는 진행 막대와 장 순서를 둔다.</p>
+    <p class="r-num">5곳, 2개 회사</p>
+    <p class="r-count">근거 5곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 01 — 05 진행 막대</li><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 넘김 표시</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 제목 아래 진행 막대</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 넘김 표시</li><li><i style="background:#c2410c"></i><b>롯데캐슬 이스트폴</b> 넘김 표시</li></ul>
+  </div>
+</li><li class="rule" id="C6">
+  <p class="r-id">C6</p>
+  <div class="r-body">
+    <p class="r-rule">아래로 내리라는 작은 표시(화살표·Scroll)를 둔다.</p>
+    <p class="r-num">4곳, 2개 회사</p>
+    <p class="r-count">근거 4곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ②</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 원형 버튼</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> Scroll Down</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 아래 화살표</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 스크롤 표시</li></ul>
+  </div>
+</li><li class="rule" id="C7">
+  <p class="r-id">C7</p>
+  <div class="r-body">
+    <p class="r-rule">첫 화면 버튼은 0~1개.</p>
+    <p class="r-num">버튼 0개 6곳</p>
+    <p class="r-count">근거 6곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 0</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 0</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 0</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 0</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 0</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 0</li></ul>
+  </div>
+</li></ol></section><section class="grp" id="gD"><h2>D. 섹션 패턴과 밀도</h2><p class="owner">주로 배운 곳: 더즈(기관 구조)</p><ol class="rules"><li class="rule" id="D1">
+  <p class="r-id">D1</p>
+  <div class="r-body">
+    <p class="r-rule">메인 길이는 화면 6~12개, 큰 덩어리 6~9개.</p>
+    <p class="r-num">가운데값 8화면, 7덩어리</p>
+    <p class="r-count">근거 9곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 8.1화면, 6</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 7.6, 7</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 8.5, 5</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 6.2, 6</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 12.2, 9</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 10.4, 6</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 7.9, 7</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 15.7, 9</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 11.7, 8</li></ul>
+  </div>
+</li><li class="rule" id="D2">
+  <p class="r-id">D2</p>
+  <div class="r-body">
+    <p class="r-rule">기관 메인 순서: 첫 화면 → 선언 한 문장(큰 글자 짧은 소개) → 사업(붙잡아 둔 무대에서 차례로) → 숫자·평가 → 소식(대표 1건+목록 또는 3칸) → 바로가기·공지 → 바닥글.</p>
+    <p class="r-num">더즈 5곳 같은 뼈대, 페이브 1곳</p>
+    <p class="r-count">근거 6곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 선언 → 사업(고정 5화면) → 미래 선언 → 뉴스 → ESG 평가 3칸 → 사업·채용 큰 카드</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 선언 → 고정 4화면 → 진료 3칸 → 예약 띠 → 뉴스 3칸 → 전문분야 목록</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 선언+큰 숫자 → 사업(고정 4화면) → 글로벌 → 인사이트·뉴스</li><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 선언 → 이야기 → 제품 → 미디어 16칸</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> ESG → 계열사 9칸 → 글로벌 → 뉴스 → 공지</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 예약 → 프로모션 4칸 → 다이닝 4칸 → 오퍼 → 브랜드</li></ul>
+  </div>
+</li><li class="rule" id="D3">
+  <p class="r-id">D3</p>
+  <div class="r-body">
+    <p class="r-rule">이야기 한 곳은 화면에 붙잡아 두고(고정) 2~5화면 길이로 넘기며 보여 준다.</p>
+    <p class="r-num">6곳, 3개 회사</p>
+    <p class="r-count">근거 6곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 5·4화면</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 4화면</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 4.3화면</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 2.5·3화면</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 3·3화면</li><li><i style="background:#111827"></i><b>플러스엑스 15주년</b> 고정 2곳</li></ul>
+  </div>
+</li><li class="rule" id="D4">
+  <p class="r-id">D4</p>
+  <div class="r-body">
+    <p class="r-rule">반복 카드는 모서리 0, 그림자 없음 — 면과 사진, 간격으로만 나눈다.</p>
+    <p class="r-num">측정한 반복 카드 전부 모서리 0px, 그림자 없음</p>
+    <p class="r-count">근거 10곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 0, 없음</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 0, 없음</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 0, 없음</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 0, 없음</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 0, 없음</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 0, 없음</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 0, 없음</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 0, 없음</li><li><i style="background:#111827"></i><b>플러스엑스 15주년</b> 0, 없음</li><li><i style="background:#111827"></i><b>플러스엑스 버추얼 쇼룸</b> 0, 없음</li></ul>
+  </div>
+</li><li class="rule" id="D5">
+  <p class="r-id">D5</p>
+  <div class="r-body">
+    <p class="r-rule">대메뉴에 올리면 화면 폭 판이 내려와 2단계 메뉴를 전부 열 맞춰 보여 준다(높이 180~430px).</p>
+    <p class="r-num">6곳, 2개 회사</p>
+    <p class="r-count">근거 6곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 284px, 링크 36, 7열</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 371px, 22, 5열</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 248px, 34</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 179px</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 241px</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 430px, 3열</li></ul>
+  </div>
+</li></ol></section><section class="grp" id="gE"><h2>E. 움직임 — 시간·곡선·스크롤</h2><p class="owner">주로 배운 곳: 페이브(움직임)·플러스엑스</p><ol class="rules"><li class="rule" id="E1">
+  <p class="r-id">E1</p>
+  <div class="r-body">
+    <p class="r-rule">휠 한 칸이 부드럽게 미끄러지는 관성 스크롤.</p>
+    <p class="r-num">9곳, 2개 회사</p>
+    <p class="r-count">근거 9곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> Lenis</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> Lenis</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> Lenis</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> Lenis</li><li><i style="background:#1d4ed8"></i><b>상쾌환 EASY TOMORROW</b> Lenis</li><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> Locomotive</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> Lenis</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> Lenis</li><li><i style="background:#c2410c"></i><b>드림에이지(DRIMAGE)</b> Lenis</li></ul>
+  </div>
+</li><li class="rule" id="E2">
+  <p class="r-id">E2</p>
+  <div class="r-body">
+    <p class="r-rule">들어오는 움직임은 감속 곡선 하나만, 0.5~1.2초. 튕김·흔들림 없음.</p>
+    <p class="r-num">cubic-bezier(.16,1,.3,1), (.215,.61,.355,1), power3.out 계열</p>
+    <p class="r-count">근거 7곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스), 이 규칙을 쓴 보드 ①, ②</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 0.53s (.215,.61,.355,1)</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> 0.5s (.25,.46,.45,.94)</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> power3.out 0.5~1.2s</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 0.5s (.38,.32,.36,.98)</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 1.5s (.25,.46,.45,.94)</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 0.25s (.11,.7,.6,.94)</li><li><i style="background:#111827"></i><b>플러스엑스 15주년</b> 0.75~1.2s (.16,1,.3,1)</li></ul>
+  </div>
+</li><li class="rule" id="E3">
+  <p class="r-id">E3</p>
+  <div class="r-body">
+    <p class="r-rule">첫 화면 한 줄은 열리고 0.9~1.8초 안에 아래에서 올라오며 나타난다.</p>
+    <p class="r-num">5곳, 2개 회사</p>
+    <p class="r-count">근거 5곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 0.9초에 투명→선명</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 1.8초(0→0.65→1)</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 1.8초</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 1.8초, 240px 글자가 105px 올라옴</li><li><i style="background:#c2410c"></i><b>롯데캐슬 이스트폴</b> 1.8초, 76px 올라옴</li></ul>
+  </div>
+</li><li class="rule" id="E4">
+  <p class="r-id">E4</p>
+  <div class="r-body">
+    <p class="r-rule">아래 40~55px에서 올라오며 약 0.9초에 끝난다(실측 곡선: 80ms 투명·55px → 260ms 0.4·33px → 520ms 0.89·6px → 900ms 끝).</p>
+    <p class="r-num">더즈 4곳, 금지 목록과 충돌하므로 쓰는 곳을 제한</p>
+    <p class="r-count">근거 4곳, 1개 회사(더즈인터랙티브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 55px, 0.9초</li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b> 40px, 0.9~1.5초</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 50px</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 30px</li></ul>
+  </div>
+</li><li class="rule" id="E5">
+  <p class="r-id">E5</p>
+  <div class="r-body">
+    <p class="r-rule">누름·올림 반응은 0.2~0.35초.</p>
+    <p class="r-num">7곳, 2개 회사</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브), 이 규칙을 쓴 보드 ①, ②, ③</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 0.2s</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 0.35s</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 0.3s</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 0.2~0.3s</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 0.2s</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> 0.3s</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 0.2~0.25s</li></ul>
+  </div>
+</li><li class="rule" id="E6">
+  <p class="r-id">E6</p>
+  <div class="r-body">
+    <p class="r-rule">머리글은 내려갈 때 숨고, 올라가면 흰 바탕으로 다시 나온다.</p>
+    <p class="r-num">3곳, 2개 회사</p>
+    <p class="r-count">근거 3곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> -98px → 0, 흰 85%</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> -130px</li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b> -162px</li></ul>
+  </div>
+</li><li class="rule" id="E7">
+  <p class="r-id">E7</p>
+  <div class="r-body">
+    <p class="r-rule">고정 무대·사진은 스크롤과 다른 속도로 움직인다(시차). 스크롤 트리거로 장면을 넘긴다.</p>
+    <p class="r-num">스크롤만큼 안 움직인 요소 22~65%</p>
+    <p class="r-count">근거 7곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 65%(폰)</li><li><i style="background:#1d4ed8"></i><b>한화그룹</b> 50%</li><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b> 43%</li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b> 39~44%, ScrollTrigger 12</li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b> ScrollTrigger 16, 고정 2</li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b> 48%(폰)</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> ScrollTrigger 스크럽</li></ul>
+  </div>
+</li><li class="rule" id="E8">
+  <p class="r-id">E8</p>
+  <div class="r-body">
+    <p class="r-rule">끝없이 흐르는 띠는 한 바퀴 25~120초로 아주 느리게.</p>
+    <p class="r-num">3곳, 2개 회사</p>
+    <p class="r-count">근거 3곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b> 60~120초</li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b> 27~45초</li><li><i style="background:#c2410c"></i><b>드림에이지(DRIMAGE)</b> 24초</li></ul>
+  </div>
+</li></ol></section><section class="grp" id="gF"><h2>F. 절대 하지 않는 것</h2><p class="owner">주로 배운 곳: 세 회사 공통</p><ol class="rules"><li class="rule" id="F1">
+  <p class="r-id">F1</p>
+  <div class="r-body">
+    <p class="r-rule">둥근 카드에 그림자를 깔지 않는다.</p>
+    <p class="r-num">반복 카드 10곳 모두 0px·그림자 없음</p>
+    <p class="r-count">근거 4곳, 3개 회사(더즈인터랙티브, 페이브, 플러스엑스)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b></li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b></li><li><i style="background:#c2410c"></i><b>그랜드 인터컨티넨탈 서울 파르나스</b></li><li><i style="background:#111827"></i><b>플러스엑스 15주년</b></li></ul>
+  </div>
+</li><li class="rule" id="F2">
+  <p class="r-id">F2</p>
+  <div class="r-body">
+    <p class="r-rule">한글 제목에 세리프를 쓰지 않는다.</p>
+    <p class="r-num">0곳</p>
+    <p class="r-count">근거 3곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b></li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b></li><li><i style="background:#c2410c"></i><b>LX 트렌드십</b></li></ul>
+  </div>
+</li><li class="rule" id="F3">
+  <p class="r-id">F3</p>
+  <div class="r-body">
+    <p class="r-rule">첫 화면에 버튼을 여러 개 늘어놓지 않는다.</p>
+    <p class="r-num">0~1개</p>
+    <p class="r-count">근거 3곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화에어로스페이스</b></li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b></li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b></li></ul>
+  </div>
+</li><li class="rule" id="F4">
+  <p class="r-id">F4</p>
+  <div class="r-body">
+    <p class="r-rule">첫 화면 제목을 세 줄 넘게 쓰지 않는다.</p>
+    <p class="r-num">1~2줄(JB 한 곳만 3줄)</p>
+    <p class="r-count">근거 3곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>KT&amp;G</b></li><li><i style="background:#1d4ed8"></i><b>이지스자산운용</b></li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b></li></ul>
+  </div>
+</li><li class="rule" id="F5">
+  <p class="r-id">F5</p>
+  <div class="r-body">
+    <p class="r-rule">강조색은 그 회사 색 하나. 여러 색을 섞지 않는다.</p>
+    <p class="r-num">한화 주황·JB 파랑·삼성 남색·한화오션 주황</p>
+    <p class="r-count">근거 4곳, 2개 회사(더즈인터랙티브, 페이브)</p>
+    <ul class="chips"><li><i style="background:#1d4ed8"></i><b>한화그룹</b></li><li><i style="background:#1d4ed8"></i><b>JB금융그룹</b></li><li><i style="background:#1d4ed8"></i><b>삼성서울병원(영문)</b></li><li><i style="background:#c2410c"></i><b>한화오션(영문)</b></li></ul>
+  </div>
+</li></ol></section></div>
+<section class="sec alt" id="habits">
+  <div class="wrap">
+    <h2>한 사이트의 버릇이라 뺀 것</h2>
+    <ul class="habits"><li><b>상쾌환 EASY TOMORROW</b> 둥근 벤토 카드 + 3D 캐릭터 — 소비자 캠페인 한 곳의 버릇</li><li><b>드림에이지(DRIMAGE)</b> &#x27;클릭해서 입장&#x27; 검은 화면 — 브랜드 체험 사이트 버릇</li><li><b>플러스엑스 버추얼 쇼룸</b> 레지스트레이션 마크·ⓒ 같은 인쇄 장식</li><li><b>플러스엑스 15주년</b> 80화면짜리 거대 숫자 스크롤</li><li><b>이지스자산운용</b> 네온 빛 3D(빛 번짐) — 금지 목록에도 걸림</li><li><b>삼성서울병원(영문)</b> 세리프 이탤릭 영문 &#x27;Care&#x27;</li><li><b>JB금융그룹</b> 한글 800 굵기 세 줄 제목</li><li><b>플러스엑스</b> &#x27;Flash&#x27; 인트로 영상</li><li><b>아키텍트(게임)</b> 게임 일러스트 첫 화면</li></ul>
+  </div>
+</section>
+<section class="sec" id="sites">
+  <div class="wrap">
+    <h2>사이트별 실측 요약</h2>
+    <p class="note">PC 1440×900 기준. '첫 화면 그림'은 첫 화면 중 사진·영상·3D가 덮는 비율, '화면 수'는 메인 전체 길이를 화면 높이로 나눈 값.</p>
+    <div class="tbl"><table class="sites"><thead><tr><th>사이트(PC 1440)</th><th>첫 화면 그림</th><th>한 줄 크기</th><th>한 줄 위치</th><th>머리글</th><th>섹션 제목</th><th>본문</th><th>화면 수</th><th>움직임 도구</th></tr></thead><tbody><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.hanwhaaerospace.com/kor/index.do">한화에어로스페이스</a></th><td>100%</td><td>51px (3.5vw) / 폰 27px</td><td>x5% y84~89%</td><td>108</td><td>59</td><td>13</td><td>8.1</td><td>ScrollTrigger, Locomotive, Swiper</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.hanwha.com/">한화그룹</a></th><td>100%</td><td>60px (4.2vw) / 폰 34px</td><td>x8% y59~68%</td><td>92</td><td>-</td><td>13</td><td>7.6</td><td>Lenis, Swiper</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.ktng.com/">KT&amp;G</a></th><td>100%</td><td>115px (8.0vw) / 폰 54px</td><td>x5% y59~85%</td><td>91</td><td>55</td><td>19.2</td><td>12.2</td><td>Lenis</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.samsunghospital.com/en/">삼성서울병원(영문)</a></th><td>100%</td><td>89px (6.2vw) / 폰 48px</td><td>x32% y40~55%</td><td>80</td><td>55</td><td>18</td><td>10.4</td><td>Lenis, GSAP, ScrollTrigger, Swiper</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.jbfg.com/">JB금융그룹</a></th><td>80%</td><td>85px (5.9vw) / 폰 64px</td><td>x4% y29~61%</td><td>98</td><td>57</td><td>16</td><td>6.2</td><td>Lenis, GSAP, ScrollTrigger, Swiper</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.igisam.com/">이지스자산운용</a></th><td>100%</td><td>104px (7.2vw) / 폰 59px</td><td>x3% y70~83%</td><td>68</td><td>57</td><td>15</td><td>8.5</td><td>Swiper</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i><a href="https://www.easytomorrow.com/en">상쾌환 EASY TOMORROW</a></th><td>34%</td><td>34px (2.4vw) / 폰 27px</td><td>x53% y54~58%</td><td>153</td><td>34</td><td>12</td><td>1.4</td><td>Lenis</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i>춘식이 관찰일기(영문)</th><td colspan="8">첫 화면이 캔버스 게임 로딩 — 구조 수치 없음</td></tr><tr><th scope="row"><i style="background:#1d4ed8"></i>한국전력</th><td colspan="8">접속 끊김(이 PC에서 계속 연결 종료)</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://www.hanwhaocean.com/en/">한화오션(영문)</a></th><td>100%</td><td>75px (5.2vw) / 폰 40px</td><td>x6% y60~82%</td><td>-</td><td>54</td><td>12</td><td>15.7</td><td>Lenis</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://seoul.intercontinental.com/">그랜드 인터컨티넨탈 서울 파르나스</a></th><td>100%</td><td>45px (3.1vw) / 폰 30px</td><td>x0% y45~51%</td><td>90</td><td>42</td><td>15</td><td>7.9</td><td>GSAP, ScrollTrigger, Swiper</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://www.lxtrendship.com/en">LX 트렌드십</a></th><td>0%</td><td>240px (16.7vw) / 폰 65px</td><td>x3% y73~100%</td><td>-</td><td>21</td><td>21</td><td>11.7</td><td>Lenis</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://drimage.com/">드림에이지(DRIMAGE)</a></th><td>100%</td><td>18px (1.2vw) / 폰 14px</td><td>x91% y9~11%</td><td>-</td><td>-</td><td>14</td><td>1</td><td>Lenis</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://eastpole.fave.kr/">롯데캐슬 이스트폴</a></th><td>100%</td><td>60px (4.2vw) / 폰 36px</td><td>x24% y34~43%</td><td>-</td><td>48</td><td>14</td><td>1</td><td>Swiper</td></tr><tr><th scope="row"><i style="background:#c2410c"></i><a href="https://architect.drimage.com/">아키텍트(게임)</a></th><td>100%</td><td>32px (2.2vw) / 폰 32px</td><td>x7% y3~3%</td><td>72</td><td>19</td><td>14</td><td>1.1</td><td>Swiper</td></tr><tr><th scope="row"><i style="background:#111827"></i><a href="https://www.plus-ex.com/">플러스엑스</a></th><td>100%</td><td>24px (1.7vw) / 폰 16px</td><td>x3% y18~21%</td><td>-</td><td>-</td><td>18</td><td>1</td><td>-</td></tr><tr><th scope="row"><i style="background:#111827"></i><a href="https://15th.plus-ex.com/">플러스엑스 15주년</a></th><td>0%</td><td>230px (16.0vw) / 폰 218px</td><td>x40% y39~59%</td><td>-</td><td>230</td><td>20</td><td>80.4</td><td>ScrollTrigger</td></tr><tr><th scope="row"><i style="background:#111827"></i><a href="https://virtual.plus-ex.com/">플러스엑스 버추얼 쇼룸</a></th><td>1%</td><td>210px (14.6vw) / 폰 78px</td><td>x5% y9~27%</td><td>-</td><td>115</td><td>20</td><td>10.7</td><td>-</td></tr></tbody></table></div>
+  </div>
+</section>
+<footer class="foot">
+  <div class="wrap">
+    <p><a href="../index.html">콘셉트 보드 3장</a>  <a href="https://honest-family.github.io/gwtp-concept-1487/">테스트 3 보드</a></p>
+  </div>
+</footer>
+</body>
+</html>
